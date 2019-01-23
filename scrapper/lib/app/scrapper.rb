@@ -54,12 +54,12 @@ end
         i += 1
    end
    return @email
-end
+ end
 
   def save_as_JSON
     pretty = JSON.pretty_generate("#{@email}")
-    File.open("db/email.json","w") do |f|
-    f.write(pretty.to_json)
+    File.open("yo.json","w") do |f|
+      f.write(pretty.to_json)
     end
   end
 
@@ -69,20 +69,34 @@ end
     p ws[1, 1]  #==> "hoge"
     ws[2, 2] = "gros"
 
-    i = 0
-    while i < 3
-      ws[3, 3] = @email[i]
-      i += 1
-    end
-      ws.save
-      ws.rows
-      ws.reload
+    # i = 0
+    # while i < 3
+    #   ws[3, 3] = @email[i]
+    #   i += 1
+    # end
+    #   ws.save
+    #   ws.rows
+    #   ws.reload
+
+        ws.reload
+        i = 0
+        n = get_townhall_urls.count
+        while i <= 4
+            ws[i+1, 1] = @emails[i]
+        i +=1
+        end
+        ws.save
+
+
+
+
   end
 
   def save_as_csv
-    CSV.open("db/file.csv") do |csv|
-      csv.write(@email)
-    end
+    # CSV.open("db/file.csv") do |csv|
+    #   csv.write(@email)
+    # end
+    CSV.open("scrap.csv", "wb") {|csv| @email.to_a.each {|elem| csv << elem} }
 
 
   end
