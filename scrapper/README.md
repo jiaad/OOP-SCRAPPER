@@ -1,9 +1,9 @@
-#SCRAPPER POO
+# SCRAPPER OOP
 
 - par JIAD
 
-#THP Paris
+# THP Paris
 
-#WEEK3
+# WEEK3 - OOP
 
-#MARDI
+# MARDI
