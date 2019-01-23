@@ -1,13 +1,9 @@
 #SCRAPPER POO
 
+- par JIAD
 
-##THP
+#THP Paris
 
-##WEEK3
+#WEEK3
 
-##MARDI
-
-
-
-
-#JIAD
+#MARDI
